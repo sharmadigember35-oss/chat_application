@@ -1,0 +1,49 @@
+.why-choose-container {
+    padding: 40px;
+    background-color: #1e272e;
+    color: #fff;
+    text-align: center;
+}
+
+.why-choose-heading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f39c12;
+}
+
+.card {
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    margin: 0 5px;
+    /* Space between individual cards */
+    width: 300px;
+    /* Fixed width for consistency */
+    height: 200px;
+    /* Fixed height for consistency */
+    box-sizing: border-box;
+    /* Ensure padding and border are included in height and width */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #4cd137;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #dcdde1;
+}
+
+.slick-dots li button:before {
+    color: #f39c12;
+}
+
+.slick-prev,
+.slick-next {
+    color: #32ab5e;
+}
