@@ -5,8 +5,8 @@ import Footer from "./components/Footer";
 import EmojiPicker from "emoji-picker-react";
 import "./App.css";
 
-const socket = io("http://localhost:5000");
-const API = "http://localhost:5000/api";
+const socket = io("https://chat-application-1-1bht.onrender.com");
+const API = "https://chat-application-1-1bht.onrender.com/api";
 
 // ─── MERN LEARNING PANEL ─────────────────────────────────────────────────────
 function MernPanel({ tip }) {
