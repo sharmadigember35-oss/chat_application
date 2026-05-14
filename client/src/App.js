@@ -5,8 +5,10 @@ import Footer from "./components/Footer";
 import EmojiPicker from "emoji-picker-react";
 import "./App.css";
 
-const socket = io("https://chat-application-1-1bht.onrender.com");
-const API = "https://chat-application-1-1bht.onrender.com/api";
+// Production: set REACT_APP_SERVER_URL on Vercel to your Render URL (no trailing slash), e.g. https://your-api.onrender.com
+const SERVER_URL = (process.env.REACT_APP_SERVER_URL || "http://localhost:5000").replace(/\/$/, "");
+const socket = io(SERVER_URL, { withCredentials: true });
+const API = `${SERVER_URL}/api`;
 
 // ─── MERN LEARNING PANEL ─────────────────────────────────────────────────────
 function MernPanel({ tip }) {
