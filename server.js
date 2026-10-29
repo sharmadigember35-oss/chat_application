@@ -47,7 +47,10 @@ app.use((req, res, next) => {
 });
 
 const JWT_SECRET = process.env.JWT_SECRET || "change_me_in_production";
-const isProduction = process.env.NODE_ENV === "production";
+// Render may not set NODE_ENV automatically. Treat the Render runtime as production
+// so cross-site cookies work between the Vercel frontend and Render API.
+const isProduction =
+  process.env.NODE_ENV === "production" || process.env.RENDER === "true";
 const sessionCookie = {
   httpOnly: true,
   secure: isProduction,
